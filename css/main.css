@@ -1,0 +1,468 @@
+/*--------------- Global----------------- */ 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Alegreya", sans-serif;
+
+}
+span {
+    color: #686868;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Alegreya Sans", sans-serif;
+    
+    
+}
+
+.bg-body {
+    background-color: #F8F8F8 !important;
+}
+
+
+.color-accent {
+    color: #8e7754;
+}
+
+.bg-color-accent {
+    color: #8e7754 !important;
+}
+
+.bg-main-footer {
+    background-color: #403D38;
+}
+.bg-bottom-footer {
+    background-color: #353330;
+}
+
+.title {
+    color: #303030;
+    /* font-size: 30px; */
+    font-family: "Alegreya", sans-serif;
+    line-height: 41px;
+}
+
+
+
+/*--------------- loading----------------- */
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 2.2rem;
+    transition: opacity 1.5s, visibility 1.5s;
+  }
+  .loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+
+  }
+  .loader::after{
+    content: '';
+    height: 50px;
+    width: 50px;
+    border: 3px solid #e8e8e8;
+    border-top-color: #8e7754;
+    border-radius: 50%;
+    animation: loading 1.2s infinite linear;
+  }
+
+@keyframes loading {
+    form{
+        transform: rotate(0turn);
+    }
+    to{
+      transform: rotate(1turn);
+    }
+    
+  }
+
+
+
+
+/*--------------- navbar----------------- */
+
+.navbar {
+    background-color: #fff !important;
+    background-color: transparent !important;
+    z-index: 999 !important;
+    position:absolute;
+    width: 100%;
+    padding-top: 20px;
+    
+}
+
+.navbar .container .navbar-collapse ul li .nav-link{
+    font-size: 18px;
+    font-weight: 400;
+    /* color: #1c1c1c; */
+    position: relative;
+    font-family: "Alegreya", sans-serif;
+    color: #fff;
+}
+.navbar .container .navbar-collapse ul li .nav-link.active{
+    font-size: 18px;
+    font-weight: 400;
+    /* color: #1c1c1c; */
+    position: relative;
+    font-family: "Alegreya", sans-serif;
+    color: #e0dcd2;
+}
+.navbar .container .navbar-collapse ul li .nav-link:hover{
+   
+    color: #8e7754;
+}
+
+.navbar .container .navbar-collapse ul li .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: -20px;
+    left: 0.5rem;
+    background-color: #8e7754;
+    transition: all 0.5s ease;
+
+    /* background-color: #8e7754; */
+    visibility: visible;
+    
+}
+.navbar .container .navbar-collapse ul li .nav-link.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:2px;
+    top: -20px;
+    left: 0px;
+    background-color: #8e7754;
+
+
+    /* background-color: #fff; */
+    visibility: visible;
+}
+.navbar .navbar-toggler i {
+    color: #8e7754;
+    font-size: 25px;
+    
+}
+
+
+
+.scrolled {
+    background-color: #fff !important;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);  
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    
+}
+.scrolled a {
+    color: #807f7f!important;
+}
+.scrolled a:hover {
+    color: #333!important;
+}
+  
+nav.scrolled a.active{
+    color: #333!important;
+}
+.scrolled .nav-link.active::after{
+    background-color: #8e7754 !important;
+  
+  }
+.scrolled .nav-link::after{
+    background-color: #8e7754 !important;
+  
+}
+
+
+
+
+
+
+/*--------------- Header----------------- */
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0 , 0 ,0 ,0.2), rgba(0 , 0 ,0 ,0.2)) ,url(../images/drew-coffman-1872.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    z-index: 1;
+}
+header .home-title h1 {
+    /* margin-bottom: 10px; */
+    color: #fff;
+    font-size: 76px;
+    margin: 0;
+    font-family: "Alegreya";
+    font-weight: 400;
+
+}
+header .home-title p {
+    color: rgba(255, 255, 255, .92);
+    font-size: 24px;
+    line-height: 1.8em;
+    font-family: "Alegreya Sans";
+
+}
+header .home-title span {
+    color: rgba(255, 255, 255, .92);
+    font-size: 22px;
+    line-height: 1.8em;
+    font-family: "Alegreya Sans";
+}
+header .home-btns .home-btn1 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    border:2px solid transparent;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-right:5px ;
+    padding: 15px 28px;
+    background-color:#8e7754;
+    font-family: "Alegreya Sans";
+
+    
+
+}
+header .home-btns .home-btn2 {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    border:2px solid #fff;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-left: 5px;
+    padding: 15px 28px;
+    background-color: transparent;
+    font-family: "Alegreya Sans";
+}
+
+header .home-btns .btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+header .scroll-button {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    text-align: center;
+    z-index: 4;
+}
+header .scroll-button a {
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+    width: 32px;
+    height: 50px;
+    border-radius: 24px;
+    text-indent: -9999px;
+    position: relative;
+    cursor: pointer;
+}
+header .scroll-button .dot {
+    height: 8px;
+    width: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+}
+
+/*--------------- About----------------- */
+.about {
+    
+    background-color: #fff;
+    
+}
+
+
+.about .features h2 {
+    font-size: 32px;
+    font-family: "Alegreya";
+    font-weight: lighter;
+    color: #303030;
+    
+}
+
+.about .features p {
+    font-size: 17px;
+    color: #686868;
+    line-height: 1.8em;
+
+}
+.about .icon-list li span {
+    font-size: 17px;
+    color: #686868;
+    line-height: 1.8em;
+
+}
+.about .icon-list li i {
+    text-align: center;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #8e7754;
+    border-radius: 50%;
+}
+
+
+
+
+
+/*--------------- Location----------------- */
+
+
+.location .content h2 {
+    font-size: 32px;
+    font-family: "Alegreya";
+    font-weight: lighter;
+    padding: 70px 0 20px 0;
+    color: #303030;
+
+}
+.location .content p {
+    line-height: 1.8em;
+    font-size: 17px;
+    color: #686868;
+    margin-bottom: 30px;
+} 
+
+
+.box .icon {
+    z-index: 1;
+    transition: all 0.5s;
+    font-size: 30px;
+    background-color: #f4f4f4;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: auto;
+
+}
+
+.box:hover .icon {
+    background-color: #1c1c1c;
+    color: #eee;
+
+}
+
+/*--------------- Products----------------- */
+
+.products .title p {
+    color: #888;
+    font-size: 17px;
+    font-family: "Alegreya Sans", sans-serif;
+    line-height: 32px;
+
+}
+.products .box h3 {
+    color: #303030;
+    font-size: 22px;
+    font-family: "Alegreya", sans-serif;
+    line-height: 30px;
+
+}
+.products .box p {
+    color: #686868;
+    font-size: 17px;
+    font-family: "Alegreya Sans", sans-serif;
+    line-height: 32px;
+
+}
+
+/*--------------- Contact----------------- */
+.contact .features h2 {
+    color: #303030;
+    font-size: 26px;
+    font-family: "Alegreya", sans-serif;
+    line-height: 35px;
+
+}
+.contact .features p {
+    color: #686868;
+    font-size: 17px;
+    font-family: "Alegreya Sans", sans-serif;
+    line-height: 32px;
+
+}
+
+.contact iframe {
+    height: 550px;
+}
+
+
+/*--------------- Footer----------------- */
+
+.footer-color {
+    color: #969696;
+
+}
+.footer p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 13px;
+    word-spacing: 2px;
+    color: #748182;
+
+}
+
+.footer p,  .footer .widget, .footer .widget-contact-details > div {
+    color: #969696;
+    /* font-size: 16px; */
+    opacity: 1;
+}
+
+footer .widget ul li {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+.footer-bottom .social-icons a {
+    background-color: #484540;
+    color: #8c8a86;
+    border-radius: 100%;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
